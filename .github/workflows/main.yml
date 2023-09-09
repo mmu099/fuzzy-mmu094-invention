@@ -1,0 +1,229 @@
+SamTradersSmcPvtLtd
+The Merchant Manufacturer Center
+Google Gemini E1 Product Expert Developer SPDY 
+Undisputed Unpaid Sponsered GitHib Developer
+Microsoft Global HD MRSC Azure DevOps Ai Developer @mmu094
+
+Verify Sam Traders Smc Pvt Ltd account in Manufacturer Center
+Skip to main content
+Manufacturer Center Help
+
+Help Center
+Announcements
+Manufacturer Center policy requirements
+Manufacturer Center allows you to provide more accurate information about your products for use in Shopping ads and listings, and across other Google services. After you set up an account, you can submit data files, enrich and curate your product data. Keep in mind that the use of data uploaded to Manufacturer Center can be restricted depending on the program it is used for.
+
+There are several program requirements for using Manufacturer Center.
+
+Only manufacturers may set up a Manufacturer Center account. We define manufacturers as brand manufacturers, brand owners, or retailers of own-brand products who both manufacture products and own the licensing rights.
+Manufacturer Center is not available to retailers who sell products exclusively from other manufacturers
+The account requestor has to be verified as an employee of the parent company
+If you are a retailer not selling your own brands and would like to list items for sale in Shopping ads, you may do so using the Merchant Center. Note that separate policy requirements apply to use of the Merchant Center.
+
+Additionally, data uploaded to the Manufacturer Center may not include certain content:
+
+Capitalizing on sensitive events, threatened or extinct species
+  Products that may be deemed as capitalizing on or lacking reasonable sensitivity towards a natural disaster, conflict, death, or other tragic event
+
+Examples: Appearing to profit from a tragic event with no discernible benefit to the victims
+ Products that may be interpreted as trading in derived from threatened or extinct species
+
+Examples: Sale of shark fins or shark cartilage supplements, elephant ivory, tiger skins, rhino horn, dolphin oil, and elkhorn coral, or products containing these ingredient 
+Child sexual abuse imagery
+  Content promoting the sexual exploitation of minors
+Counterfeit products
+  Products that mimic the brand features of another product in an attempt to pass themselves off as the genuine product of the brand owner
+
+ Products described as knock off, replica, imitation, clone, faux, fake, mirror image, or similar terms when referring to a brand name in an attempt to pass themselves off as genuine products of the brand owner
+
+Examples: non-authentic products that have brand name labels or logos
+Inappropriate content
+We value diversity and respect for others, and we strive to avoid offending users, so we don’t allow ads or destinations that display shocking content or promote hatred, intolerance, discrimination, or violence.
+
+  Content that incites hatred against, promotes discrimination of, or disparages an individual or group on the basis of their race or ethnic origin, religion, disability, age, nationality, veteran status, sexual orientation, gender, gender identity, or other characteristic that is associated with systemic discrimination or marginalization.
+
+Examples: Content promoting hate groups or hate group paraphernalia, content that encourages others to believe that a person or group is inhuman, inferior, or worthy of being hated.
+ Content that harasses, intimidates or bullies an individual or group of individuals
+
+Examples: Content that singles out someone for abuse or harassment
+ Content that threatens or advocates for harm on oneself or others
+
+Examples: Content advocating suicide, anorexia, or other self-harm; threatening someone with real-life harm or calling for the attack of another person; promoting, glorifying, or condoning violence against others
+ Content that seeks to exploit or humiliate others
+
+Examples: Extortion, blackmail
+Local legal requirements
+  Content uploaded to the Manufacturer Center, has to adhere to local legal requirements 
+Misleading or unrealistic promotions
+   Falsely implying affiliation with, or endorsement by, another individual, organization, product, or service
+
+ Making false statements about the promoted products
+
+ Using false claims or claims that entice the user with an improbable result (even if this result is possible) as the likely outcome that a user can expect
+
+Examples: ‘Miracle cures’ for medical ailments; extreme weight loss products, body altering capacities of weight or muscle gain products, permanent or excessive claims around fertility, misleading implementation of government or other agency names’ endorsement or mention of products.
+Sexually explicit content
+   Text, image, audio, or video of graphic sexual acts intended to arouse
+
+Examples: Hardcore pornography; sex acts such as genital, anal, and oral sex; masturbation; cartoon porn or hentai
+ Content promoting underage, non-consensual, or other illegal sexual themes, whether simulated or real
+
+Examples: Rape, incest, bestiality, necrophilia, lolita or teen-themed pornography
+Shocking content
+  Promotions containing violent language, gruesome imagery, or graphic images or accounts of physical trauma
+
+Examples: Crime scene or accident photos, execution photos
+ Promotions containing gratuitous portrayals of or sale of bodily fluids, human waste, or human tissue
+
+Examples: Blood, guts, gore, sexual fluids, human eggs or sperm
+Was this helpful?
+YesNo
+Need more help?
+Contact us
+Tell us more and we’ll help you get there
+ dansk‎dansk (Danmark)‎Deutsch‎English (United Kingdom)‎español‎español (Latinoamérica)‎français‎Indonesia‎italiano‎magyar‎Nederlands‎norsk‎polski‎português (Brasil)‎română‎slovenčina‎suomi‎svenska‎Tiếng Việt‎Türkçe‎čeština‎Ελληνικά‎русский‎українська‎‏עברית‏العربيةहिन्दी‎ไทย‎中文（简体）‎中文（繁體）‎日本語‎한국어‎ English‎  English‎
+
+
+
+
+Mubashir Ali Mumtaz
+(@mmu094)Dev-mmu094
+GitHub Inc USA
+Sponsored Developer Program
+octocat@github.com
+mubashir18@live.com
+https://myoctocat.com/
+https://github.com/mmu094
+Create a new feed - Manufacturer Center Help
+In order to upload your product data in Manufacturer Center, you'll first need to create a feed to which you can submit your data. This step is required for any new feed, and once a feed is created, you can update the existing feed without having to create it again.
+
+How it works
+Primary feeds
+A primary feed is the required data source that Manufacturer Center uses to display your products on Google.
+
+For example:
+
+ID [id]	Title [title]	GTIN [gtin]	Brand [brand]
+1	shirt	343234567890126	Brand A
+2	shoes	468013579357	Brand B
+3	hiking boots	680246913579	Brand C
+4	pants	9504000059437	Brand A
+You can overwrite your entire product data feed by creating and resubmitting another data file as a primary feed under the same feed name.
+
+Use primary feeds to add or remove product data, and set language and country targeting for your product data. Primary feeds are the only feed type that can add or remove products.
+
+Create a primary feed
+Supplemental feeds
+Supplemental feeds provide additional, or supplemental, data that can be connected to existing product data in the primary feed. Supplemental feeds cannot add or remove products, or be used as a standalone feed; instead, they're used to update existing product data. Supplemental feeds can also provide additional information to multiple primary feeds.
+
+To use a supplemental feed, connect it to existing primary feed through the ID [id] attribute used for products in the primary feed. Supplemental feeds will only update your product data when the supplemental feed contains IDs that already exist in a primary feed.
+
+Example
+Primary feed
+ID [id]	Title [title]	MSRP	Brand [brand]
+1	shirt	34	Brand A
+2	shoes	55	Brand B
+3	hiking boots	100	Brand C
+4	pants	75	Brand A
+Supplemental feed
+ID [id]	Color [color]
+1	RED
+4	BLACK
+Resulting feed
+ID [id]	Title [title]	MSRP	Brand [brand]	Color [color]
+1	shirt	34	Brand A	RED
+2	shoes	55	Brand B	-
+3	hiking boots	100	Brand C	-
+4	pants	75	Brand A	BLACK
+Create a supplemental feed
+
+
+
+Mubashir Ali Mumtaz
+(@mmu094)Dev-mmu094
+GitHub Inc USA
+Sponsored Developer Program
+octocat@github.com
+mubashir18@live.com
+https://myoctocat.com/
+https://github.com/mmu094
+Skip to main content
+Manufacturer Center Help
+
+Help Center
+Announcements
+ID [id]
+An illustration demonstrating how the unique IDs for 3 different colors of teddy bears would show in product data.
+Use the ID [id] attribute to uniquely identify each product. It won’t be shown to users, but you can use it to look up your product in your account. We recommend that you use your product SKU or GTIN [gtin] for this value.
+When to use
+Required for all products.
+Format
+Follow these formatting guidelines to make sure Google understands the data you're submitting.
+
+For details on when and how to submit values in English, learn more about submitting your product data
+
+Type	Unicode characters (Recommended: ASCII only): alphanumeric, underscores, and dashes 
+Limits	Up to 50 characters
+Repeated field	No
+ 
+
+File format	Example value
+Text feeds	tddy123uk
+XML feeds	<g:id>tddy123uk</g:id>
+Guidelines
+Follow these guidelines to make sure you submit high-quality data for your products.
+
+Minimum requirements
+These are the requirements you'll need to meet to show your product on Google. If you don't follow these requirements, we'll disapprove your product and let you know in the Diagnostics page of your Manufacturer Center account.
+
+Use a unique ID for each different product. The ID allows you and Google to distinguish each product.
+Use a stable ID for each product. Once you've assigned an ID to a product, don't change it. The ID you choose, in combination with target country and language, identifies the product, helps us to retrieve any product-specific information, and is used to track the product's history. If you change the ID, you'll overwrite your product and its history.
+Don’t rely on casing to make IDs unique. For example, we interpret the ID "abc123" and "ABC123" as the same product.
+Don’t reuse or recycle the same ID for different products. For example:
+Don’t reuse an ID for different products.
+Don’t reuse an ID for products with variants. Each variant is a unique product and needs a unique ID.
+Don’t recycle an ID for new products. Even if you’re not distributing a product anymore or the product has been discontinued, don't use that product's ID for any other product.
+Avoid white space. Consecutive white spaces and white spaces before and after the ID will be automatically removed.
+Don't submit invalid unicode characters. These characters are generally added during your file's encoding process. To avoid them, use UTF-8 encoding. To help prevent encoding issues, submit files in a compressed format. Examples of invalid unicode characters include:
+Control characters (for example, U+200D)
+Function characters
+Private area characters
+Surrogate pairs
+Unassigned code points
+Best practices
+These best practices can help you go beyond the basic requirements to optimize your product data for performance.
+
+Use SKUs or GTINs where possible. Since SKUs and GTINs are unique, they can also help prevent you from accidentally reusing IDs.
+Examples
+Product without variants
+Product with variants
+Same product submitted to multiple countries
+Was this helpful?
+YesNo
+Need more help?
+Contact us
+Tell us more and we’ll help you get there
+ dansk‎dansk (Danmark)‎Deutsch‎English (United Kingdom)‎español‎español (Latinoamérica)‎français‎Indonesia‎italiano‎magyar‎Nederlands‎norsk‎polski‎português (Brasil)‎română‎slovenčina‎suomi‎svenska‎Tiếng Việt‎Türkçe‎čeština‎Ελληνικά‎русский‎українська‎‏עברית‏العربيةहिन्दी‎ไทย‎中文（简体）‎中文（繁體）‎日本語‎한국어‎ English‎  English‎
+
+
+
+
+Mubashir Ali Mumtaz
+(@mmu094)Dev-mmu094
+GitHub Inc USA
+Sponsored Developer Program
+octocat@github.com
+mubashir18@live.com
+https://myoctocat.com/
+https://github.com/mmu094
+https://www.google.com/url?sa=D&q=https://services.google.com/fh/gumdrop/preview/newsletters/rich_data_spoonflower_case_study.pdf&ust=1694219389698763&usg=AOvVaw0_eGLtNuAhQPxUBxOnVwrw
+
+
+Mubashir Ali Mumtaz
+(@mmu094)Dev-mmu094@us
+GitHub Inc USA
+Sponsored Developer Program
+octocat@github.com
+mubashir18@live.com
+https://myoctocat.com/
+https://github.com/mmu094
