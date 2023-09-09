@@ -1,0 +1,345 @@
+SMSPL The Manufacturer Center
+Supported file formats - Manufacturer Center Help
+Google currently supports uploading data files in both tab-delimited and XML formats. See below for instructions on creating each file type.
+
+Tab-delimited file instructions
+Tab-separated values, or TSV, files are one of two supported file formats for Manufacturer Center. Most TSV files are created using spreadsheet programs. You'll include the attribute names in the first row (i.e. header) separated by a tab. Then starting on the second row, include the corresponding values under each attribute name. We recommend using a spreadsheet program such as Google Sheets or LibreOffice to create and save tab-delimited files.
+
+Create your data file
+Step 1: Open your spreadsheet program
+
+Use a spreadsheet program such as Google Sheets. This makes it easy to create a data file and convert it to the proper format.
+
+Step 2: Create a header row
+
+On the first row of the spreadsheet, enter the names of the attributes that describe your products, each in its own column. Include all the required attributes and any relevant recommended attributes.
+
+An example using some sample attributes in the header row would look like this:
+
+ 	A	B	C	D	E	F
+1	
+ID [id]
+
+Brand [brand]
+
+Title [title]
+
+GTIN [gtin]
+
+Description [description]
+
+Image link [image_link]
+
+Step 3: Enter your item information
+
+In the rows below the header row, enter information about your items for the attributes you've chosen. Each item should be listed in a separate row, and its information divided into the appropriate columns. (For example, a product's description should be in the same column as the "description" header.)
+
+ 	A	B	C	D	E	F
+1	ID [id]	Brand [brand]	Title [title]	GTIN
+[gtin]	Description [description]	Image link [image_link]
+2	123-yelbr	Acme Toys	Acme Toys - Yellow Bear	001234567890	Sample description	link.com/pic
+3	456-redbr	Acme Toys	Acme Toys - Red Bear	001234598760	Sample description	link.com/pic
+Step 4: Convert your spreadsheet
+
+Most spreadsheet programs allow you to export data into a tab-delimited file. Either of the options below will create a file with a name ending in the .tsv extension. This is the file you should submit to Manufacturer Center.
+
+If you're using Google Sheets:
+From the File menu, select Download as and then .Tab-separated values (.tsv, current sheet). Your tab-delimited text file will be displayed in a new window.
+Name your file, and be sure to specify the file type as a .tsv if it gives you the option. Click Save.
+If you're using LibreOffice:
+Select File > Save as....
+Select format Text CSV (.csv). Though it says CSV, it actually generates all kinds of text files.
+Check Edit filter settings. Click Save. If a warning appears, continue with the Text CSV format.
+In the new pop-up, leave Character set as Unicode (UTF-8); change Field delimiter to {Tab} from the dropdown; delete the value in Text delimiter; leave the other checkboxes as they are and click OK.
+If you've already registered a feed in your Manufacturer Center account, use the same file name that you specified during the setup process.
+
+Step 5: Submit your file via a data feed
+
+Check that your file meets our format requirements below and submit it to us.
+
+Format Requirements
+The file must be tab-delimited.
+The first line of the file is the header -- it must contain attribute names, separated by tabs.
+One item per line; separate each attribute in that line by a tab.
+Do not include trailing tabs at the end of lines.
+Do not include tabs or line breaks in the attributes themselves.
+Formatting repeated attributes
+The following attributes are repeated attributes:
+
+A repeated attribute is one that accepts more than one value.
+
+Values of a repeated attribute must be separated by a comma.
+If a value of a repeated attribute contains a comma, it must be encapsulated by straight double quotes.
+Product type [product_type]
+“Home & Garden > Kitchen, Dining & Table > Appliances > Refrigerator”, Household Appliances > Kitchen > Refrigerator
+If a quoted value contains a double quote, it must be doubled.
+"Sharp 7"" tablet screen (323 pixels per inch)", "Long lasting battery, up to 9-10 hrs of active use", Quad-core speed and performance with 2GB RAM, Comes with Android 4.3
+The following attributes are repeated group attributes:
+
+A group attribute is one that has sub-attributes.
+
+The product detail attribute has three sub-attributes:
+Section name [section_name]
+Attribute name [attribute_name]
+Attribute value [attribute_value]
+Headline [headline]
+Text [text]
+A group attribute is provided by providing values for all of its sub-attributes separated by a colon.
+
+Like repeated attributes, values containing a comma, and also values containing a colon, must be encapsulated by straight double quotes. Also, quotes within quoted values must be doubled.
+Feature description [feature_description]
+Enhanced zoom with new release:The newest generation comes with enhanced zoom to show you more of the world around you.:"http://example.com/image1.png",Sharper resolution:"The product now comes with 15""display that is 10X sharper than our previous releases, and it has a 3.5X zoom.":"http://example.com/image2.jpg"
+XML file instructions
+Extensible Markup Language (XML) provides a flexible framework for encoding structured data in a format which is both human- and machine-readable. Google recommends using XML files if you have a product information management (PIM) system with robust export capabilities.
+
+Google supports an extended version of RSS 2.0 with standard attributes linked to their respective sections in the official RSS 2.0 specification to assist you in finding additional information about the components from our examples. Although Google provides examples of RSS 2.0 files, we provide minimal details about RSS 2.0 itself. Learn more about this standard at http://blogs.law.harvard.edu/tech/rss.
+
+Section 1: RSS 2.0
+Based on the RSS 2.0 specification, there are three pre-defined elements at the item level - title, link, and description. Although these elements are optional in the RSS 2.0 standard, product data feeds require them.
+
+Product data feeds also require additional elements such as ID [id], brand [brand], and GTIN [gtin]. To include these elements and more detailed information about a product, Google extended RSS 2.0 by adding the Manufacturer Center feed namespace. Defining the Manufacturer Center namespace allows you to use additional elements, called "attributes", and increases the amount of information you can provide about each product in a feed.
+
+Below is an example of a basic RSS 2.0 document containing a single product:
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>Acme Inc</title>
+    <link>http://www.amce.com</link>
+    <description>A sample feed for Acme Inc product line</description>
+    <item>
+      <g:id>actb7-16-B</g:id>
+      <g:brand>Acme</g:brand>
+      <g:title>Acme Tablet - WiFi - 16GB - Black</g:title>
+      <g:gtin>001234567895</g:gtin>
+      <g:gtin>1001234567894</g:gtin>
+      <g:mpn>ACMETAB16</g:mpn>
+      <g:disclosure_date>2013-01-15</g:disclosure_date>
+      <g:release_date>2013-03-04</g:release_date>
+      <g:suggested_retail_price>USD 129.00</g:suggested_retail_price>
+      <g:product_name>AcTab 7</g:product_name>
+      <g:product_line>AcTab</g:product_line>
+      <g:product_type>Device &gt; Tablet Computer</g:product_type>
+      <g:product_type>Computer &gt; Tablet Computer</g:product_type>
+      <g:item_group_id>AcTab-7-2013</g:item_group_id>
+      <g:color>Black</g:color>
+      <g:product_detail>
+        <g:section_name>General</g:section_name>
+        <g:attribute_name>Product Type</g:attribute_name>
+        <g:attribute_value>Digital player</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>General</g:section_name>
+        <g:attribute_name>Digital Player Type</g:attribute_name>
+        <g:attribute_value>Flash based</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Display</g:section_name>
+        <g:attribute_name>Resolution</g:attribute_name>
+        <g:attribute_value>432 x 240</g:attribute_value>
+      </g:product_detail>
+      <g:product_detail>
+        <g:section_name>Display</g:section_name>
+        <g:attribute_name>Diagonal Size</g:attribute_name>
+        <g:attribute_value>2.5"</g:attribute_value>
+      </g:product_detail>
+      <g:description>Now thinner, lighter, and faster - AcTab brings you the perfect mix of power and portability and features a sharp 7" screen.</g:description>
+      <g:feature_description>
+        <g:headline>An amazingly sharp 7" screen.</g:headline>
+        <g:text>This Super High Resolution 7" tablet puts over 2.3 million pixels in the palm of your hand.</g:text>
+        <g:image_link>http://www.acme.com/actab7/screen</g:image_link>
+      </g:feature_description>
+      <g:feature_description>
+        <g:headline>Sound that surrounds.</g:headline>
+        <g:text>AcTab7 features dual stereo speakers, so you get rich and immersive audio. Hear it all more clearly with finely tuned volume boost technology that makes dialog and sound crisp and easier on the ears.</g:text>
+        <g:image_link>http://www.acme.com/actab7/sound</g:image_link>
+      </g:feature_description>
+      <g:feature_description>
+        <g:headline>Lighter than ever, lasts longer.</g:headline>
+        <g:text>At just 0.64lbs, the all-new AcTab is light enough to take anywhere and fits easily in bags, backpacks, and even back-pockets. With up to 9 hours of HD video playback and 10 hours of web browsing or e-reading, there's plenty of juice to get you through the day, and built-in wireless charging means you can charge, grab, and go.</g:text>
+        <g:image_link>http://www.acme.com/actab7/battery</g:image_link>
+      </g:feature_description>
+      <g:image_link>https://acme.com/actab7.png</g:image_link>
+      <g:additional_image_link>https://acme.com/actab7.png</g:additional_image_link>
+      <g:additional_image_link>https://acme.com/actab7-front.png</g:additional_image_link>
+      <g:additional_image_link>https://acme.com/actab7-back.png</g:additional_image_link>
+      <g:video_link>https://www.youtube.com/watch?v=abc</g:video_link>
+      <g:product_page_url>http://www.acme.com/actab</g:product_page_url>
+    </item>
+  </channel>
+</rss>
+
+The two major additions in this example are the addition of the namespace declaration [xmlns:g="http://base.google.com/ns/1.0"] and the inclusion of Manufacturer Center attributes, such as GTIN [gtin], MPN [mpn], suggested retail price [suggested_retail_price], and release date [release_date].
+
+Manufacturer Center namespace declaration
+
+The following namespace declaration is required in order to use attributes defined only in the Manufacturer Center namespace: [xmlns:g="http://base.google.com/ns/1.0"]
+
+In addition to declaring the Manufacturer Center namespace, you must also include a prefix within every attribute tag. We add this prefix to attributes to distinguish attributes defined in our namespace from elements defined in RSS 2.0. The prefix selected for this namespace declaration is "g": <g:image_link>http://www.google.com/images/google_sm.gif</g:image_link>
+
+Attributes in the Manufacturer Center namespace must include this prefix or the attributes, and any values they contain, will be ignored.
+
+Attributes
+
+You can use as many relevant attributes as are specific to your products. Supplying additional information about your products by using these attributes will greatly increase your items' chances of showing up in Shopping ads results. In addition, many attributes defined in the Manufacturer Center namespace can be used more than once within a single product. This enables you to include more available information about a product in your data file.
+
+Section 2: Important Checklist
+Before you submit your file, Google highly recommends checking this list to help ensure your file is properly formatted:
+
+The feed filename you register in your Manufacturer Center account must match the name you assign to your file.
+Remember to include the following namespace declaration: [xmlns:g="http://base.google.com/ns/1.0"]
+Verify the prefix included in the Manufacturer Center attribute tags matches the prefix defined in the namespace declaration.
+Remove attributes that do not contain any values.
+Section 3: Final Note
+The sample entry included in this document was simplified to allow for clearer focus on the basics of constructing an XML product data file. While Google accepts data files containing other elements defined in the RSS 2.0 standard or in your own namespace, any information these elements contain will be ignored during processing and will not appear in your listings. At this time Google will only process data contained in the default RSS 2.0 elements and in attributes within the Manufacturer Center namespace.
+hVerify Sam Traders Smc Pvt Ltd account in Manufacturer Center
+Skip to main content
+Manufacturer Center Help
+
+Help Center
+Announcements
+Manufacturer Center policy requirements
+Manufacturer Center allows you to provide more accurate information about your products for use in Shopping ads and listings, and across other Google services. After you set up an account, you can submit data files, enrich and curate your product data. Keep in mind that the use of data uploaded to Manufacturer Center can be restricted depending on the program it is used for.
+
+There are several program requirements for using Manufacturer Center.
+
+Only manufacturers may set up a Manufacturer Center account. We define manufacturers as brand manufacturers, brand owners, or retailers of own-brand products who both manufacture products and own the licensing rights.
+Manufacturer Center is not available to retailers who sell products exclusively from other manufacturers
+The account requestor has to be verified as an employee of the parent company
+If you are a retailer not selling your own brands and would like to list items for sale in Shopping ads, you may do so using the Merchant Center. Note that separate policy requirements apply to use of the Merchant Center.
+
+Additionally, data uploaded to the Manufacturer Center may not include certain content:
+
+Capitalizing on sensitive events, threatened or extinct species
+  Products that may be deemed as capitalizing on or lacking reasonable sensitivity towards a natural disaster, conflict, death, or other tragic event
+
+Examples: Appearing to profit from a tragic event with no discernible benefit to the victims
+ Products that may be interpreted as trading in derived from threatened or extinct species
+
+Examples: Sale of shark fins or shark cartilage supplements, elephant ivory, tiger skins, rhino horn, dolphin oil, and elkhorn coral, or products containing these ingredient 
+Child sexual abuse imagery
+  Content promoting the sexual exploitation of minors
+Counterfeit products
+  Products that mimic the brand features of another product in an attempt to pass themselves off as the genuine product of the brand owner
+
+ Products described as knock off, replica, imitation, clone, faux, fake, mirror image, or similar terms when referring to a brand name in an attempt to pass themselves off as genuine products of the brand owner
+
+Examples: non-authentic products that have brand name labels or logos
+Inappropriate content
+We value diversity and respect for others, and we strive to avoid offending users, so we don’t allow ads or destinations that display shocking content or promote hatred, intolerance, discrimination, or violence.
+
+  Content that incites hatred against, promotes discrimination of, or disparages an individual or group on the basis of their race or ethnic origin, religion, disability, age, nationality, veteran status, sexual orientation, gender, gender identity, or other characteristic that is associated with systemic discrimination or marginalization.
+
+Examples: Content promoting hate groups or hate group paraphernalia, content that encourages others to believe that a person or group is inhuman, inferior, or worthy of being hated.
+ Content that harasses, intimidates or bullies an individual or group of individuals
+
+Examples: Content that singles out someone for abuse or harassment
+ Content that threatens or advocates for harm on oneself or others
+
+Examples: Content advocating suicide, anorexia, or other self-harm; threatening someone with real-life harm or calling for the attack of another person; promoting, glorifying, or condoning violence against others
+ Content that seeks to exploit or humiliate others
+
+Examples: Extortion, blackmail
+Local legal requirements
+  Content uploaded to the Manufacturer Center, has to adhere to local legal requirements 
+Misleading or unrealistic promotions
+   Falsely implying affiliation with, or endorsement by, another individual, organization, product, or service
+
+ Making false statements about the promoted products
+
+ Using false claims or claims that entice the user with an improbable result (even if this result is possible) as the likely outcome that a user can expect
+
+Examples: ‘Miracle cures’ for medical ailments; extreme weight loss products, body altering capacities of weight or muscle gain products, permanent or excessive claims around fertility, misleading implementation of government or other agency names’ endorsement or mention of products.
+Sexually explicit content
+   Text, image, audio, or video of graphic sexual acts intended to arouse
+
+Examples: Hardcore pornography; sex acts such as genital, anal, and oral sex; masturbation; cartoon porn or hentai
+ Content promoting underage, non-consensual, or other illegal sexual themes, whether simulated or real
+
+Examples: Rape, incest, bestiality, necrophilia, lolita or teen-themed pornography
+Shocking content
+  Promotions containing violent language, gruesome imagery, or graphic images or accounts of physical trauma
+
+Examples: Crime scene or accident photos, execution photos
+ Promotions containing gratuitous portrayals of or sale of bodily fluids, human waste, or human tissue
+
+Examples: Blood, guts, gore, sexual fluids, human eggs or sperm
+Was this helpful?
+YesNo
+Need more help?
+Contact us
+Tell us more and we’ll help you get there
+ dansk‎dansk (Danmark)‎Deutsch‎English (United Kingdom)‎español‎español (Latinoamérica)‎français‎Indonesia‎italiano‎magyar‎Nederlands‎norsk‎polski‎português (Brasil)‎română‎slovenčina‎suomi‎svenska‎Tiếng Việt‎Türkçe‎čeština‎Ελληνικά‎русский‎українська‎‏עברית‏العربيةहिन्दी‎ไทย‎中文（简体）‎中文（繁體）‎日本語‎한국어‎ English‎  English‎
+
+
+
+
+Mubashir Ali Mumtaz
+(@mmu094)Dev-mmu094
+GitHub Inc USA
+Sponsored Developer Program
+octocat@github.com
+mubashir18@live.com
+https://myoctocat.com/
+https://github.com/mmu094
+Create a new feed - Manufacturer Center Help
+In order to upload your product data in Manufacturer Center, you'll first need to create a feed to which you can submit your data. This step is required for any new feed, and once a feed is created, you can update the existing feed without having to create it again.
+
+How it works
+Primary feeds
+A primary feed is the required data source that Manufacturer Center uses to display your products on Google.
+
+For example:
+
+ID [id]	Title [title]	GTIN [gtin]	Brand [brand]
+1	shirt	343234567890126	Brand A
+2	shoes	468013579357	Brand B
+3	hiking boots	680246913579	Brand C
+4	pants	9504000059437	Brand A
+You can overwrite your entire product data feed by creating and resubmitting another data file as a primary feed under the same feed name.
+
+Use primary feeds to add or remove product data, and set language and country targeting for your product data. Primary feeds are the only feed type that can add or remove products.
+
+Create a primary feed
+Supplemental feeds
+Supplemental feeds provide additional, or supplemental, data that can be connected to existing product data in the primary feed. Supplemental feeds cannot add or remove products, or be used as a standalone feed; instead, they're used to update existing product data. Supplemental feeds can also provide additional information to multiple primary feeds.
+
+To use a supplemental feed, connect it to existing primary feed through the ID [id] attribute used for products in the primary feed. Supplemental feeds will only update your product data when the supplemental feed contains IDs that already exist in a primary feed.
+
+Example
+Primary feed
+ID [id]	Title [title]	MSRP	Brand [brand]
+1	shirt	34	Brand A
+2	shoes	55	Brand B
+3	hiking boots	100	Brand C
+4	pants	75	Brand A
+Supplemental feed
+ID [id]	Color [color]
+1	RED
+4	BLACK
+Resulting feed
+ID [id]	Title [title]	MSRP	Brand [brand]	Color [color]
+1	shirt	34	Brand A	RED
+2	shoes	55	Brand B	-
+3	hiking boots	100	Brand C	-
+4	pants	75	Brand A	BLACK
+Create a supplemental feed
+
+
+
+Mubashir Ali Mumtaz
+(@mmu094)Dev-mmu094
+GitHub Inc USA
+Sponsored Developer Program
+octocat@github.com
+mubashir18@live.com
+https://myoctocat.com/
+https://github.com/mmu094
+https://rizqshops.com
+https://rizqrevolution.com
+https://samtraderssmcpvtltd.com
+https://www.google.com/url?sa=D&q=https://services.google.com/fh/gumdrop/preview/newsletters/rich_data_spoonflower_case_study.pdf&ust=1694219389698763&usg=AOvVaw0_eGLtNuAhQPxUBxOnVwrw
+
+
+
